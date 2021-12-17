@@ -1,0 +1,51 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    runtimeOnly 'mysql:mysql-connector-java'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+
+    compile 'org.apache.httpcomponents:httpclient:4.5.13'
+    compile group: 'org.apache.httpcomponents', name: 'fluent-hc', version: '4.5.13'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.11'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
